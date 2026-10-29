@@ -372,20 +372,26 @@
     document.documentElement.addEventListener('mouseleave', () => follow.classList.remove('on'));
   }
 
-  // Bagels wandering around the footer (behind its content; only animated while visible)
-  const fb = document.getElementById('ftrBagels');
+  // Bagels wandering in the footer's logo zone (above the divider), half passing in front of
+  // the big logo and half behind it; the text area below stays clear. Animated only while visible.
+  const fb = document.getElementById('ftrBagels'), fbFront = document.getElementById('ftrBagelsFront');
+  const ftr = document.querySelector('.ftr'), ftrGrid = document.querySelector('.ftr-grid');
   if (!reduce) {
-    const COUNT = innerWidth < 600 ? 6 : 11;
+    const COUNT = innerWidth < 600 ? 6 : 10;
     const items = [];
     let fw = 0, fh = 0, ftrOn = false, fLast = 0;
-    const fsize = () => { fw = fb.clientWidth; fh = fb.clientHeight; };
+    const fsize = () => {
+      const zone = ftrGrid.getBoundingClientRect().top - ftr.getBoundingClientRect().top;
+      ftr.style.setProperty('--zone', Math.round(zone) + 'px');
+      fw = fb.clientWidth; fh = zone;
+    };
     fsize();
     for (let n = 0; n < COUNT; n++) {
       const el = new Image();
       el.src = 'img/bagel-follow.svg'; el.alt = '';
       const s = 26 + Math.random() ** 1.5 * 54;
       el.width = el.height = Math.round(s);
-      fb.appendChild(el);
+      (n % 2 ? fbFront : fb).appendChild(el);
       const a = Math.random() * 6.283, v = 18 + Math.random() * 26;
       items.push({ el, s, x: Math.random() * (fw - s), y: Math.random() * (fh - s), vx: Math.cos(a) * v, vy: Math.sin(a) * v,
         r: Math.random() * 360, vr: (Math.random() - .5) * 60, wob: Math.random() * 6.283 });
