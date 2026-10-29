@@ -372,18 +372,17 @@
     document.documentElement.addEventListener('mouseleave', () => follow.classList.remove('on'));
   }
 
-  // Bagels wandering in the footer's logo zone (above the divider), half passing in front of
-  // the big logo and half behind it; the text area below stays clear. Animated only while visible.
+  // Bagels wandering around the whole footer. In the logo zone (above the divider) half of them pass
+  // in front of the big logo; below it every bagel slips behind the text. Animated only while visible.
   const fb = document.getElementById('ftrBagels'), fbFront = document.getElementById('ftrBagelsFront');
   const ftr = document.querySelector('.ftr'), ftrGrid = document.querySelector('.ftr-grid');
   if (!reduce) {
     const COUNT = innerWidth < 600 ? 6 : 10;
     const items = [];
-    let fw = 0, fh = 0, ftrOn = false, fLast = 0;
+    let fw = 0, fh = 0, zone = 0, ftrOn = false, fLast = 0;
     const fsize = () => {
-      const zone = ftrGrid.getBoundingClientRect().top - ftr.getBoundingClientRect().top;
-      ftr.style.setProperty('--zone', Math.round(zone) + 'px');
-      fw = fb.clientWidth; fh = zone;
+      zone = ftrGrid.getBoundingClientRect().top - ftr.getBoundingClientRect().top;
+      fw = fb.clientWidth; fh = fb.clientHeight;
     };
     fsize();
     for (let n = 0; n < COUNT; n++) {
@@ -391,9 +390,10 @@
       el.src = 'img/bagel-follow.svg'; el.alt = '';
       const s = 26 + Math.random() ** 1.5 * 54;
       el.width = el.height = Math.round(s);
-      (n % 2 ? fbFront : fb).appendChild(el);
+      const front = n % 2 === 1;
+      (front ? fbFront : fb).appendChild(el);
       const a = Math.random() * 6.283, v = 18 + Math.random() * 26;
-      items.push({ el, s, x: Math.random() * (fw - s), y: Math.random() * (fh - s), vx: Math.cos(a) * v, vy: Math.sin(a) * v,
+      items.push({ el, s, front, x: Math.random() * (fw - s), y: Math.random() * (fh - s), vx: Math.cos(a) * v, vy: Math.sin(a) * v,
         r: Math.random() * 360, vr: (Math.random() - .5) * 60, wob: Math.random() * 6.283 });
     }
     function floop(now) {
@@ -407,6 +407,8 @@
         b.x += b.vx * dt; b.y += b.vy * dt; b.r += b.vr * dt;
         if (b.x < 0) { b.x = 0; b.vx = Math.abs(b.vx); } else if (b.x > fw - b.s) { b.x = fw - b.s; b.vx = -Math.abs(b.vx); }
         if (b.y < 0) { b.y = 0; b.vy = Math.abs(b.vy); } else if (b.y > fh - b.s) { b.y = fh - b.s; b.vy = -Math.abs(b.vy); }
+        const layer = b.front && b.y + b.s / 2 < zone ? fbFront : fb;
+        if (b.el.parentNode !== layer) layer.appendChild(b.el);
         b.el.style.transform = `translate(${b.x}px, ${b.y}px) rotate(${b.r}deg)`;
       }
       requestAnimationFrame(floop);

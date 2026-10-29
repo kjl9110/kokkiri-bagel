@@ -244,7 +244,7 @@ legend{font-family:var(--f-display);font-size:22px;margin-bottom:12px}
 /* Footer */
 .ftr{position:relative;background:var(--salmon);color:var(--ink);padding-block:clamp(60px,8vw,100px) calc(28px + env(safe-area-inset-bottom,0px));overflow:hidden;border-top:3px solid var(--ink)}
 .ftr > .wrap{position:relative;z-index:1}
-.ftr-bagels{position:absolute;left:0;right:0;top:0;height:var(--zone,50%);pointer-events:none}
+.ftr-bagels{position:absolute;inset:0;pointer-events:none}
 .ftr-bagels.front{z-index:2}
 .ftr-bagels img{position:absolute;left:0;top:0;opacity:.9;filter:drop-shadow(0 4px 6px rgba(46,31,20,.2))}
 .ftr-big{font-family:var(--f-display);font-size:clamp(44px,11.4vw,200px);line-height:.9;color:var(--cream-2);letter-spacing:-.03em;white-space:nowrap;display:flex;align-items:flex-end;gap:.08em}
