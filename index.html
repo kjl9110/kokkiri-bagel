@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>코끼리 베이글</title>
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#F8452A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Inter:wght@400;500&family=Jua&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<link rel="preload" as="image" href="seq/001.webp">
+<link rel="preload" as="image" href="img/bagel-start.webp">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="인스타그램">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <nav class="nav-split" aria-label="주요 메뉴">
+      <div class="dd">
+        <a href="#menu" class="dd-btn" aria-haspopup="true">Shop<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dd-menu">
+          <a href="#menu">플레인</a>
+          <a href="#menu">오픈 연어</a>
+          <a href="#menu">연어 크림치즈</a>
+        </div>
+      </div>
+      <a href="#events">Events</a>
+      <a href="#notice">Notice</a>
+      <a href="#story">About us</a>
+      <a class="logo" href="#top" aria-label="코끼리 베이글 처음으로"><img class="lg-cream" src="img/logo-main.webp" alt="" width="1558" height="233"><img class="lg-ink" src="img/logo-ink.webp" alt="" width="1558" height="233"></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="drawer" id="nav" aria-label="전체 메뉴">
+  <a href="#menu">베이글</a>
+  <a href="#process">굽는 법</a>
+  <a href="#story">우리 이야기</a>
+  <a href="#visit">오시는 길</a>
+  <a href="#contact">단체 주문</a>
+  <p>화–일 07:00–18:00 · 월요일 휴무</p>
+</div>
+
+<main id="top">
+  <section class="hero" id="hero" aria-label="메인 영상">
+    <div class="stage" id="stage">
+      <h1 class="htype" id="htype" aria-label="코끼리 베이글, Daily baked bagels">
+        <span class="h-logo" aria-hidden="true"><img src="img/logo-main.webp" alt="" width="1558" height="233"></span>
+        <span class="h-l2" aria-hidden="true">DAILY BAKED</span>
+        <span class="h-l3" aria-hidden="true">BAGELS<i class="ring"></i></span>
+      </h1>
+      <div class="h-cut" id="hcut" aria-hidden="true"><img src="img/bagel-cut.webp" alt="" width="900" height="572"></div>
+      <canvas id="cv" aria-label="베이글 단면이 눌렸다가 연어 베이글로 완성되는 영상" role="img"></canvas>
+
+      <div class="beat b-left top" data-i="0" data-in=".2" data-out=".36">
+        <span class="tag">BAGEL NO.1</span>
+        <h2>꾹 누르면<br><span>쫄깃</span>하게<br>돌아와요</h2>
+        <p>하루 숙성한 반죽이라 기공이 촘촘하고 탄력이 살아 있습니다.</p>
+      </div>
+
+      <div class="beat b-right bottom" data-i="1" data-in=".4" data-out=".61">
+        <span class="tag">BOILED &amp; BAKED</span>
+        <h2>데치고,<br>굽고,<br>또 굽고</h2>
+        <p>끓는 물에 데친 뒤 참나무 장작 화덕에서 구워, 겉은 바삭하고 속은 쫄깃합니다.</p>
+      </div>
+
+      <div class="beat b-left bottom" data-i="2" data-in=".66" data-out=".83">
+        <span class="tag">TOPPING</span>
+        <ul class="ingredients">
+          <li>훈제연어</li>
+          <li>크림치즈</li>
+          <li>적양파</li>
+          <li>케이퍼 · 딜</li>
+        </ul>
+      </div>
+
+      <div class="beat b-right bottom" data-i="3" data-in=".87" data-out="1.1">
+        <h2>코끼리처럼<br>든든한 한 끼</h2>
+        <p>오늘 아침 구운 베이글로 만든 연어 크림치즈 베이글.</p>
+        <a class="btn" href="#menu">메뉴 보기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="hud">
+        <div class="tc" id="tcWrap" aria-hidden="true"><span class="rec"></span><span id="tc">00:00:00:00</span><span class="bar"><b id="tcBar"></b></span><span>00:00:23:21</span></div>
+      </div>
+      <div class="scroll-cue" id="cue" aria-hidden="true"><span>SCROLL</span><i></i></div>
+      <div class="loader" id="loader"></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>매일 아침 굽는 베이글</span><span>쫄깃 탱탱</span><span>코끼리 베이글</span><span>연어 크림치즈</span><span>단체 주문 환영</span>
+      <span>매일 아침 굽는 베이글</span><span>쫄깃 탱탱</span><span>코끼리 베이글</span><span>연어 크림치즈</span><span>단체 주문 환영</span>
+    </div>
+  </div>
+
+  <section class="stretch" id="stretch" aria-label="쫄깃함">
+    <div class="wrap">
+      <div class="stretch-word" id="stretchWord" aria-label="쫄깃">
+        <span class="g" aria-hidden="true">쫄</span><span class="dough" aria-hidden="true"></span><span class="g" aria-hidden="true">깃</span>
+      </div>
+      <div class="stretch-copy">
+        <h2>씹을수록 고소해지는<br>반죽을 만듭니다</h2>
+        <p>밀가루, 물, 소금, 효모. 재료는 단순하게 두고 시간을 들입니다. 저온에서 하룻밤 재운 반죽은 결이 단단하고, 한 입 베어 물면 천천히 늘어납니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">굽는 법</span>
+          <h2>베이글 하나가<br>나오기까지</h2>
+        </div>
+        <p>오븐 대신 참나무 장작을 때는 화덕에 불을 지피며 하루를 시작합니다.</p>
+      </div>
+      <ol class="cards">
+        <li class="card">
+          <figure><img src="img/cut.webp" alt="촘촘한 기공이 보이는 베이글 단면" loading="lazy" width="1200" height="676"></figure>
+          <div class="step"><span class="num">01</span><h3>숙성</h3></div>
+          <p>저온에서 하룻밤. 기공이 고르게 자리 잡습니다.</p>
+        </li>
+        <li class="card">
+          <figure><img src="img/whole.webp" alt="반짝이는 껍질의 플레인 베이글" loading="lazy" width="1200" height="676"></figure>
+          <div class="step"><span class="num">02</span><h3>데치기 · 굽기</h3></div>
+          <p>끓는 물에 데친 뒤 참나무 장작 화덕에서 굽습니다.</p>
+        </li>
+        <li class="card">
+          <figure><img src="img/open.webp" alt="연어와 케이퍼, 딜을 올린 베이글" loading="lazy" width="1200" height="676"></figure>
+          <div class="step"><span class="num">03</span><h3>올리기</h3></div>
+          <p>크림치즈를 넉넉히 바르고 연어와 채소를 겹겹이.</p>
+        </li>
+        <li class="card">
+          <figure><img src="img/full.webp" alt="완성된 연어 크림치즈 베이글" loading="lazy" width="1200" height="676"></figure>
+          <div class="step"><span class="num">04</span><h3>완성</h3></div>
+          <p>뚜껑을 덮으면 손에 쥐고 먹기 좋은 한 끼가 됩니다.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="events" id="events">
+    <div class="wrap">
+      <div class="ev-head">
+        <div>
+          <span class="eyebrow">Event</span>
+          <h2>지금 코끼리 베이글에서는</h2>
+        </div>
+        <p>신메뉴 소식과 혜택, 매장 공지를 모았어요.</p>
+      </div>
+      <ul class="ev-grid">
+        <li class="ev"><a href="img/ev1.webp" aria-haspopup="dialog"><figure><img src="img/ev1.webp" alt="웰컴 쿠폰 포스터: 무료배송, 생일쿠폰, 적립 1%" loading="lazy" width="800" height="1000"></figure><span class="ev-cap"><span class="ev-tag hot">혜택</span><b>Welcome Lucky Benefit</b></span></a></li>
+        <li class="ev"><a href="img/ev2.webp" aria-haspopup="dialog"><figure><img src="img/ev2.webp" alt="9월 25일 추석 당일 휴무 안내 포스터" loading="lazy" width="800" height="1000"></figure><span class="ev-cap"><span class="ev-tag">공지</span><b>추석 매장 휴무 안내</b></span></a></li>
+        <li class="ev"><a href="img/ev3.webp" aria-haspopup="dialog"><figure><img src="img/ev3.webp" alt="평일 샌드위치와 아메리카노 런치 세트 10,000원 포스터" loading="lazy" width="800" height="1000"></figure><span class="ev-cap"><span class="ev-tag hot">이벤트</span><b>LUNCH SET</b></span></a></li>
+        <li class="ev"><a href="img/ev4.webp" aria-haspopup="dialog"><figure><img src="img/ev4.webp" alt="통팥 베이글 출시 포스터" loading="lazy" width="800" height="1000"></figure><span class="ev-cap"><span class="ev-tag hot">신메뉴</span><b>NEW 통팥 베이글</b></span></a></li>
+        <li class="ev"><a href="img/ev5.webp" aria-haspopup="dialog"><figure><img src="img/ev5.webp" alt="라따뚜이 베이글 출시 포스터" loading="lazy" width="800" height="1000"></figure><span class="ev-cap"><span class="ev-tag hot">신메뉴</span><b>NEW 라따뚜이 베이글</b></span></a></li>
+        <li class="ev"><a href="img/ev6.webp" aria-haspopup="dialog"><figure><img src="img/ev6.webp" alt="선불카드 출시 이벤트 포스터" loading="lazy" width="800" height="1000"></figure><span class="ev-cap"><span class="ev-tag">혜택</span><b>행운을 지갑에 쏙!</b></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="notice" id="notice">
+    <div class="wrap">
+      <div class="nt-head">
+        <img src="img/elephant.svg" alt="" width="326" height="222" loading="lazy">
+        <h2>NOTICE</h2>
+      </div>
+      <div class="nt-wrap">
+        <table class="nt">
+          <thead><tr><th scope="col">번호</th><th scope="col">제목</th><th scope="col">작성자</th><th scope="col">작성일</th></tr></thead>
+          <tbody>
+            <tr class="nt-row"><td class="num pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="고정 공지"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></td><td class="t"><button class="nt-toggle" type="button" aria-expanded="false" aria-controls="nt1">[오픈 안내] 코끼리베이글 온라인 스토어 안내 드립니다.</button><span class="date-m">관리자 · 26.09.01</span></td><td class="who">관리자</td><td class="date">26.09.01</td></tr>
+            <tr class="nt-body" id="nt1" hidden><td colspan="4"><div class="nt-text">
+              <p>안녕하세요, 코끼리베이글입니다. 매장에서만 만나던 베이글을 이제 온라인 스토어에서도 주문하실 수 있어요.</p>
+              <ul><li>판매 품목: 플레인, 연어 크림치즈 등 매장 인기 메뉴와 크림치즈</li><li>배송: 평일 오후 2시 이전 주문 시 당일 출고 (주말·공휴일 휴무)</li><li>신규 가입 시 무료배송 쿠폰을 드려요.</li></ul>
+              <p>더 자세한 내용은 스토어 공지사항을 확인해 주세요.</p>
+            </div></td></tr>
+            <tr class="nt-row"><td class="num">1</td><td class="t"><button class="nt-toggle" type="button" aria-expanded="false" aria-controls="nt2">[추석연휴 배송 공지 안내]</button><span class="date-m">운영자 · 26.09.14</span></td><td class="who">운영자</td><td class="date">26.09.14</td></tr>
+            <tr class="nt-body" id="nt2" hidden><td colspan="4"><div class="nt-text">
+              <p>추석 연휴 동안 택배사 휴무로 배송 일정이 아래와 같이 조정됩니다.</p>
+              <ul><li>9월 22일(월) 오후 2시 주문 건까지 연휴 전 출고</li><li>9월 23일(화) – 9월 27일(토) 주문 건은 9월 29일(월)부터 순차 출고</li><li>매장은 추석 당일인 9월 25일(목) 하루만 쉬어요.</li></ul>
+              <p>행운 가득한 한가위 보내세요!</p>
+            </div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">베이글</span>
+          <h2>오늘의 베이글</h2>
+        </div>
+        <p>매일 굽는 양이 정해져 있어 오후에는 일찍 마감될 수 있어요.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="item">
+          <figure><img src="img/whole.webp" alt="플레인 베이글" loading="lazy" width="1200" height="676"></figure>
+          <div class="item-body">
+            <div class="item-top"><h3>플레인</h3><span class="price">2,800원</span></div>
+            <p>반죽 맛을 그대로 느낄 수 있는 기본 베이글.</p>
+            <div class="chips"><span>비건</span><span>매일</span></div>
+          </div>
+        </article>
+        <article class="item">
+          <figure><img src="img/open.webp" alt="오픈 연어 베이글" loading="lazy" width="1200" height="676" class="pos-low"></figure>
+          <div class="item-body">
+            <div class="item-top"><h3>오픈 연어</h3><span class="price">8,900원</span></div>
+            <p>반으로 가른 베이글 위에 연어, 케이퍼, 딜을 올렸습니다.</p>
+            <div class="chips"><span>훈제연어</span><span>케이퍼</span><span>딜</span></div>
+          </div>
+        </article>
+        <article class="item">
+          <figure><img src="img/full.webp" alt="연어 크림치즈 베이글" loading="lazy" width="1200" height="676"><span class="badge">대표 메뉴</span></figure>
+          <div class="item-body">
+            <div class="item-top"><h3>연어 크림치즈</h3><span class="price">9,800원</span></div>
+            <p>크림치즈, 연어, 적양파, 양상추를 꽉 채운 코끼리 베이글의 대표 메뉴.</p>
+            <div class="chips"><span>크림치즈</span><span>적양파</span><span>양상추</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="menu-more"><a class="btn ghost" href="#contact">단체 주문 문의하기</a></div>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="wrap story-grid">
+      <div class="story-art">
+        <img class="ele" src="img/elephant.svg" alt="코끼리 베이글 코끼리 일러스트" width="326" height="222">
+        <div class="photo"><img src="img/cut.webp" alt="베이글 단면" loading="lazy" width="1200" height="676"></div>
+        <svg class="seal" viewBox="0 0 160 160" aria-hidden="true">
+          <defs><path id="circ" d="M80 80 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
+          <circle cx="80" cy="80" r="76" fill="#FBF3E6" stroke="#2E1F14" stroke-width="3"/>
+          <text><textPath href="#circ">참나무 장작 화덕 · 코끼리 베이글 · </textPath></text>
+          <circle cx="80" cy="80" r="20" fill="none" stroke="#EE5F2F" stroke-width="9"/>
+        </svg>
+      </div>
+      <div class="story-copy">
+        <span class="eyebrow">우리 이야기</span>
+        <h2>오븐 대신<br>참나무 장작<br><em>화덕에서 굽습니다</em></h2>
+        <p>코끼리베이글은 오븐이 아니라 참나무 장작을 때는 화덕에서 굽습니다. 장작불에서 구운 베이글은 겉은 더 바삭하고, 속은 깊고 쫄깃해요. 이 맛을 내기까지 2년 넘게 실패를 반복했고, 지금도 모든 매장을 직영으로 운영하며 한 번의 반죽도 소홀히 하지 않습니다.</p>
+        <ul class="facts">
+          <li><b>참나무</b><span>장작 화덕</span></li>
+          <li><b>2년+</b><span>맛을 완성하기까지</span></li>
+          <li><b>4곳</b><span>모두 직영 매장</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap visit-grid">
+      <div class="visit-map">
+        <svg viewBox="0 0 600 460" role="img" aria-label="매장 위치 약도: ○○역 2번 출구에서 도보 3분">
+          <rect width="600" height="460" fill="#ECD5B0"/>
+          <g fill="#E2C59A">
+            <rect x="30" y="30" width="150" height="120" rx="14"/><rect x="230" y="30" width="170" height="120" rx="14"/><rect x="450" y="30" width="120" height="120" rx="14"/>
+            <rect x="30" y="210" width="150" height="220" rx="14"/><rect x="450" y="210" width="120" height="100" rx="14"/><rect x="450" y="350" width="120" height="80" rx="14"/>
+          </g>
+          <path d="M230 210h170v220H230z" fill="#C9DDB0"/>
+          <g fill="none" stroke="#FBF3E6" stroke-linecap="round">
+            <path d="M0 180H600" stroke-width="34"/><path d="M205 0V460" stroke-width="28"/><path d="M425 0V460" stroke-width="22"/><path d="M425 330H600" stroke-width="16"/>
+          </g>
+          <path d="M0 180H600" stroke="#2E1F14" stroke-width="2" stroke-dasharray="14 12" opacity=".25"/>
+          <g transform="translate(205 180)">
+            <rect x="-40" y="-16" width="80" height="32" rx="16" fill="#55703A"/>
+            <text y="6" text-anchor="middle" font-size="16" fill="#FBF3E6" font-family="IBM Plex Sans KR, sans-serif" font-weight="700">○○역</text>
+          </g>
+          <path d="M240 196 C 290 230, 300 250, 340 262" fill="none" stroke="#F2492C" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+          <g transform="translate(360 270)">
+            <ellipse cx="0" cy="40" rx="22" ry="7" fill="#2E1F14" opacity=".18"/>
+            <path d="M0 38C-26 8-34-6-34-20a34 34 0 0 1 68 0c0 14-8 28-34 58z" fill="#F2492C" stroke="#2E1F14" stroke-width="3"/>
+            <circle cx="0" cy="-20" r="17" fill="#FBF3E6" stroke="#2E1F14" stroke-width="3"/>
+            <circle cx="0" cy="-20" r="8" fill="none" stroke="#D9A05B" stroke-width="5"/>
+          </g>
+          <text x="315" y="345" text-anchor="middle" font-size="18" fill="#2E1F14" font-family="Jua, sans-serif">코끼리 베이글</text>
+        </svg>
+        <span class="visit-note">약도는 예시예요</span>
+      </div>
+      <div class="visit-copy">
+        <span class="eyebrow">오시는 길</span>
+        <h2>갓 구운 냄새를<br>따라오세요</h2>
+        <p class="visit-addr">서울 영등포구 선유로 176 (양평동 3가) 1층 60호</p>
+        <div class="visit-btns">
+          <a class="vbtn" href="https://map.naver.com/p/search/%EC%BD%94%EB%81%BC%EB%A6%AC%EB%B2%A0%EC%9D%B4%EA%B8%80" target="_blank" rel="noopener">네이버 지도</a>
+          <a class="vbtn" href="https://map.kakao.com/?q=%EC%BD%94%EB%81%BC%EB%A6%AC%EB%B2%A0%EC%9D%B4%EA%B8%80" target="_blank" rel="noopener">카카오맵</a>
+          <button class="vbtn" type="button" id="copyAddr" data-addr="서울 영등포구 선유로 176 (양평동 3가) 1층 60호">주소 복사</button>
+        </div>
+        <dl class="visit-info">
+          <div><dt>영업시간</dt><dd>화–일 07:00–18:00<br><small>베이글 소진 시 조기 마감 · 월요일 휴무</small></dd></div>
+          <div><dt>지하철</dt><dd>○○역 2번 출구에서 도보 3분</dd></div>
+          <div><dt>버스</dt><dd>○○정류장 하차 · 간선 000, 지선 0000</dd></div>
+          <div><dt>주차</dt><dd>전용 주차장이 없어요. 인근 공영주차장을 이용해 주세요.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">문의</span>
+        <h2>무슨 일로<br>오셨어요?</h2>
+        <p class="lead">회의용 단체 주문, 행사 케이터링, 함께 하고 싶은 일이 있다면 남겨 주세요.</p>
+        <dl class="info">
+          <div><dt>매장</dt><dd>서울 영등포구 선유로 176 (양평동 3가) 1층 60호</dd></div>
+          <div><dt>영업</dt><dd>화–일 07:00–18:00 · 월요일 휴무</dd></div>
+          <div><dt>전화</dt><dd>02-2672-7778</dd></div>
+        </dl>
+      </div>
+      <form id="form" novalidate>
+        <div id="formFields" class="form-fields">
+          <fieldset>
+            <legend>문의 종류</legend>
+            <div class="choice">
+              <input type="radio" name="kind" id="k1" value="order" checked><label for="k1">단체 주문</label>
+              <input type="radio" name="kind" id="k2" value="collab"><label for="k2">함께 일하기</label>
+              <input type="radio" name="kind" id="k3" value="etc"><label for="k3">기타</label>
+            </div>
+          </fieldset>
+          <div class="row2">
+            <div class="field"><label for="fname">이름</label><input id="fname" name="name" autocomplete="name" placeholder="홍길동" required></div>
+            <div class="field"><label for="femail">이메일</label><input id="femail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          </div>
+          <div class="field"><label for="fmsg">내용</label><textarea id="fmsg" name="msg" placeholder="예) 11월 8일 오전 10시, 연어 크림치즈 20개 픽업 원해요"></textarea></div>
+          <label class="agree" for="fagree"><input type="checkbox" id="fagree" required> 문의 답변을 위한 개인정보 수집에 동의합니다.</label>
+          <div class="form-foot">
+            <button class="btn" type="submit">보내기
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <span class="demo-note" id="formMsg">시안용 폼이라 실제로 전송되지는 않아요.</span>
+          </div>
+        </div>
+        <div class="done" id="done" hidden>
+          <img class="done-ele" src="img/elephant.svg" alt="" width="326" height="222">
+          <h3>고마워요!</h3>
+          <p>확인하고 연락드릴게요. (시안 화면)</p>
+          <button class="btn" type="button" id="again">다시 쓰기</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="ftr-bagels" id="ftrBagels" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="ftr-big"><img src="img/logo-main.webp" alt="코끼리 베이글" width="1558" height="233" loading="lazy"></div>
+    <div class="ftr-grid">
+      <div><h4>둘러보기</h4><ul><li><a href="#menu">베이글</a></li><li><a href="#process">굽는 법</a></li><li><a href="#story">우리 이야기</a></li><li><a href="#visit">오시는 길</a></li><li><a href="#contact">단체 주문</a></li></ul></div>
+      <div><h4>오프라인 매장</h4><ul><li>영등포</li><li>한남동</li><li>성수동</li><li>인사동</li></ul></div>
+      <div><h4>소식</h4><ul><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">인스타그램</a></li></ul></div>
+      <div><h4>화덕 베이글</h4><ul><li>참나무 장작 화덕</li><li>하루 한정 수량</li><li>소진 시 조기 마감</li></ul></div>
+    </div>
+    <div class="ftr-biz">
+      <ul>
+        <li><b>상호</b>(주)코끼리베이글성수 영등포지점</li><li><b>대표</b>천홍원</li><li><b>사업자등록번호</b>000-00-00000</li><li><b>통신판매업신고</b>제0000-서울○○-0000호</li>
+        <li><b>주소</b>서울 영등포구 선유로 176 (양평동 3가) 1층 60호</li><li><b>고객센터</b>02-2672-7778 (업무시간 10:00~12:00, 13:00~17:00)</li>
+      </ul>
+      <p class="ftr-legal"><a href="#top">이용약관</a><a href="#top"><b>개인정보처리방침</b></a><span>ⓒ Kokkili Bagel, INC. All rights reserved.</span></p>
+    </div>
+    <div class="ftr-bottom"><span>웹디자인 포트폴리오용 리디자인 시안이며 코끼리베이글 공식 사이트가 아닙니다.</span><span>매장 정보는 공식 사이트(kokkilibagel.com)를 참고했으며, 사업자 번호·영업시간·교통 안내는 예시입니다.</span></div>
+  </div>
+</footer>
+
+<dialog class="ev-modal" id="evModal" aria-labelledby="evModalTitle">
+  <div class="ev-modal-box">
+    <button class="ev-close" type="button" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <figure><img id="evModalImg" src="" alt="" width="800" height="1000"></figure>
+    <div class="ev-modal-cap">
+      <span class="ev-tag" id="evModalTag"></span>
+      <h3 id="evModalTitle"></h3>
+      <span class="ev-count" id="evModalCount"></span>
+    </div>
+    <button class="ev-nav prev" type="button" aria-label="이전 소식"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="ev-nav next" type="button" aria-label="다음 소식"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</dialog>
+
+<button class="to-top" id="toTop" type="button" aria-label="맨 위로">
+  <svg class="to-top-ring" viewBox="0 0 60 60" aria-hidden="true"><rect x="2" y="2" width="56" height="56" rx="18" pathLength="100"/></svg>
+  <svg class="to-top-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<img class="follow" id="follow" src="img/bagel-follow.svg" alt="" aria-hidden="true" width="64" height="64">
+
+<script src="js/script.js"></script>
+</body>
+</html>

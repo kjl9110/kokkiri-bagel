@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="49 42 326 222" width="326" height="222">
+  <defs>
+    <filter id="hand" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#hand)" fill="none" stroke="#2E1F14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- bagel held by the trunk -->
+    <circle cx="80" cy="76" r="22" fill="#E0A862" stroke-width="6"/>
+    <circle cx="80" cy="76" r="7.5" fill="#F6E8D2" stroke-width="5"/>
+    <path d="M66 66 q6-8 15-9" stroke="#FFF6E6" stroke-width="4"/>
+    <!-- head + back + rump -->
+    <path d="M100 148 C86 98 118 52 170 49 C196 48 214 56 226 66 C258 50 314 56 336 100 C350 128 351 170 345 208" stroke-width="7"/>
+    <!-- rear leg -->
+    <path d="M345 206 C346 222 346 236 344 246 C343 253 338 256 330 256 L316 256 C309 256 306 251 307 245 L309 226" stroke-width="7"/>
+    <!-- belly -->
+    <path d="M309 226 C286 236 250 237 228 228" stroke-width="6"/>
+    <!-- front leg -->
+    <path d="M228 228 C229 236 229 244 227 249 C225 254 220 256 214 256 L199 256 C192 256 189 252 190 246 L193 214" stroke-width="7"/>
+    <!-- neck / jaw down to trunk -->
+    <path d="M193 214 C176 207 160 196 152 182" stroke-width="6"/>
+    <!-- trunk: lower edge curling up to the bagel -->
+    <path d="M152 182 C140 194 120 200 102 194 C82 186 70 166 68 140 C67 124 69 110 73 98" stroke-width="7"/>
+    <!-- trunk: upper edge -->
+    <path d="M100 148 C101 162 108 172 120 176 C104 178 90 166 87 146 C85 132 87 118 91 104" stroke-width="6"/>
+    <!-- trunk tip -->
+    <path d="M73 98 C78 95 86 97 91 104" stroke-width="5"/>
+    <!-- trunk wrinkles -->
+    <path d="M77 150 q6-4 12 0 M74 132 q6-4 12 0 M80 168 q6-3 11 2" stroke-width="3.2"/>
+    <!-- ear -->
+    <path d="M170 66 C214 58 246 90 241 132 C237 168 204 184 178 170 C170 166 166 158 168 150" stroke-width="7"/>
+    <path d="M190 88 C212 94 224 116 217 142" stroke-width="3.5" opacity=".7"/>
+    <!-- eye, brow, lashes -->
+    <circle cx="132" cy="110" r="5.5" fill="#2E1F14" stroke="none"/>
+    <circle cx="134" cy="108" r="1.6" fill="#FFF6E6" stroke="none"/>
+    <path d="M121 96 q10-7 21-1" stroke-width="3.5"/>
+    <!-- cheek + smile -->
+    <ellipse cx="146" cy="138" rx="11" ry="6.5" fill="#F2492C" opacity=".28" stroke="none"/>
+    <path d="M128 160 C134 168 146 170 154 164" stroke-width="4"/>
+    <!-- toenails -->
+    <path d="M318 256 q3-6 6 0 M327 256 q3-6 6 0 M201 256 q3-6 6 0 M210 256 q3-6 6 0" stroke-width="3"/>
+    <!-- tail with tuft -->
+    <path d="M346 140 C362 148 366 164 360 180" stroke-width="4.5"/>
+    <path d="M360 180 l-6 7 M360 180 l1 9 M360 180 l7 5" stroke-width="3.5"/>
+    <!-- back wrinkles -->
+    <path d="M300 96 q8 6 6 16 M312 92 q8 6 7 16" stroke-width="3" opacity=".5"/>
+  </g>
+</svg>
